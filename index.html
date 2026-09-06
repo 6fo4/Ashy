@@ -1193,7 +1193,6 @@ const AVATAR_DECORATION_SRC = 'profiledeco.gif';
 const TRACKS = [
     { title: '315breathe', artist: 'Russ', file: '315breathe.mp3', cover: '315breathe.jpg' },
     { title: 'Day N Nite', artist: 'Kid Cudi', file: 'DayNite.mp3', cover: 'DayNite.jpg' },
-    { title: 'all i need', artist: 'chasingwhiterabbits & tezvix', file: 'allineed.mp3', cover: 'allineed.jpg' },
     { title: 'bimbodoll', artist: 'Tila Tsoli', file: 'bimbodoll.mp3', cover: 'bimbodoll.jpg' },
     { title: 'Cool for the Summer', artist: 'Demi Lovato', file: 'coolforsummer.mp3', cover: 'coolforsummer.jpg' },
     { title: 'crush', artist: '2hollis', file: 'crush-2hollis.mp3', cover: 'crush-2hollis.jpg' },
@@ -2507,25 +2506,20 @@ safeRun(function initAnimeControls(){
 /* ============================================================
    COMMENTS / GUESTBOOK — global via Firebase Firestore
    ------------------------------------------------------------
-   One-time setup so comments are shared with every visitor
-   (not just saved in your own browser):
-     1. Go to https://console.firebase.google.com and create a
-        free project.
-     2. In that project, open Build → Firestore Database →
-        Create database (test mode is fine to start with).
-     3. Project settings (gear icon) → General → "Your apps" →
-        add a Web app → copy the firebaseConfig object it gives
-        you into FIREBASE_CONFIG below.
-   Until you fill FIREBASE_CONFIG in, the guestbook quietly
-   falls back to per-browser storage so the site still works.
    ============================================================ */
 const FIREBASE_CONFIG = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBBXpjaUjH8sNEwZ85iuvSKq-MQUHQ-9ws",
+  authDomain: "comments-58f5c.firebaseapp.com",
+  projectId: "comments-58f5c",
+  storageBucket: "comments-58f5c.firebasestorage.app",
+  messagingSenderId: "968267094370",
+  appId: "1:968267094370:web:c8653dbf014a68a200b43b",
+  measurementId: "G-ZL2SW23J18"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 };
 const COMMENT_DISLIKE_LIMIT = 5;
 const COMMENT_VOTES_KEY = 'ashy_comment_votes_v1'; // which way THIS browser voted — kept local, there's no login system
